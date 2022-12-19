@@ -19,7 +19,7 @@ jobs:
         id: pkgs
         with:
           format: space-delimited
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_TOKEN }}
         continue-on-error: true
       - uses: uraimo/run-on-arch-action@v2
         name: Run commands
