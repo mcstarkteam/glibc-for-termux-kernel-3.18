@@ -1,4 +1,4 @@
-name: Compiling glibc packages for termux 3.18
+name: Compiling glibc packages for termux kernel 3.18.139
 
 on:
   push:
