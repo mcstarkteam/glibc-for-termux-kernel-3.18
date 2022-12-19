@@ -77,6 +77,7 @@ build() {
       --enable-cet \
       --enable-kernel=4.4 \
       --enable-multi-arch \
+      --enable-kernel=3.18.139 \
       --enable-stack-protector=strong \
       --enable-systemtap \
       --disable-profile \
