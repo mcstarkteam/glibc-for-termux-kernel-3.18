@@ -89,6 +89,7 @@ build() {
       --with-bugurl=https://github.com/Maxython/glibc-for-termux/issues \
       --enable-bind-now \
       --enable-cet \
+      --enable-kernel=3.18.139 \
       --enable-multi-arch \
       --enable-stack-protector=strong \
       --enable-systemtap \
