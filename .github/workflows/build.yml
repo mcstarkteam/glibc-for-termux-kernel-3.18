@@ -29,7 +29,7 @@ jobs:
           distro: archarm_latest
           githubToken: ${{ github.token }}
           setup: |
-            mkdir -p "${PWD}/builder"
+            mkdir -p "${PWD}/builder" && setenforce 0
           dockerRunArgs: |
             --volume "${PWD}/builder:/builder"
           install: |
@@ -37,6 +37,7 @@ jobs:
             pacman -S base-devel python git cmake python-setuptools ruby-ronn publicsuffix-list gtk-doc autoconf-archive gtest rsync --noconfirm --needed
           run: |
             useradd -m user-build
+            setenforce 0
             mkdir -p /data/data/com.termux/files/usr/bin
             ln -s /bin/patch /data/data/com.termux/files/usr/bin/patch
             mkdir -p /data/data/com.termux/files/usr/glibc
