@@ -20,14 +20,14 @@ jobs:
         with:
           format: space-delimited
           token: ${{ secrets.MY_TOKEN }}
-        continue-on-error: false
+        continue-on-error: true
       - uses: uraimo/run-on-arch-action@v2
         name: Run commands
         id: build
         with:
           arch: ${{ matrix.target_arch }}
           distro: archarm_latest
-          githubToken: ${{ github.token }}
+          githubToken: ${{ my.token }}
           setup: |
             mkdir -p "${PWD}/builder" && setenforce 0
           dockerRunArgs: |
